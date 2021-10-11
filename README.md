@@ -27,14 +27,14 @@ FeedForward is a Learning Management System built with multi-memory architecture
 ## Status
 WIP , V1 Coming soon November.
 
-### Licenses
+### License
 MIT License
 
 Copyright (c) 2021 Thibaut Lombard
  
-FeedForward project: Guilad Levy (translation), Yosr Feki (Content producer), Chafiq El Hammami(e2e Management), Hanane El Meskini (Content tester), Asmae Lombard (Country Manager - MA)
+FeedForward project: Thibaut LOMBARD (Founder and Project Manager), Asmae Lombard (Country Manager - MA), Yosr Feki (Content producer), Chafiq El Hammami(e2e Management), Hanane El Meskini (Content tester), , Guilad Levy (translation)
 
-Credits script used: Szymon Nowak, James Hall, Natalia Davydova, Sanjay Ghemawat (sanjay@google.com) and Jeff Dean (jeff@google.com), Evgeny Poberezkin (Mozilla), Evgeny Poberezkin (Mozilla)
+Credits script used: Szymon Nowak, James Hall, Natalia Davydova, Sanjay Ghemawat (sanjay@google.com) and Jeff Dean (jeff@google.com), Evgeny Poberezkin (Mozilla)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
