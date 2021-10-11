@@ -1,8 +1,8 @@
 # FeedForward
-FeedForward is a Learning Management System built with multi memories architecture. This web app is coded in fullstack Javascript and support DOM storage as much as remote storage database. 
+FeedForward is a Learning Management System built with multi-memory architecture. This web app is coded in fullstack Javascript and support DOM storage as much as remote storage database. 
 
 ## Example
-![image](https://raw.githubusercontent.com/Lombard-Web-Services/FeedForward/master/FeedForward/demo/quiz.gif)
+![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/quiz.gif)
 
 ## Functionnalities
 * API Quiz
