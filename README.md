@@ -7,7 +7,7 @@ FeedForward is a Learning Management System built with multi-memory architecture
 ## Functionnalities
 * API Quiz
 * Social networks (likes, and Star rating)
-* Lightening fast database storage
+* Lightning fast database storage
 * Responsive
 
 ## Technologies
@@ -18,6 +18,14 @@ FeedForward is a Learning Management System built with multi-memory architecture
 * Javascript
 * NodeJS
 
+## Languages
+* French
+* Arabic
+* Hebrew
+* English
+
+## Status
+WIP , V1 Coming soon November.
 
 ### Licenses
 MIT License
