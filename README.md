@@ -1,5 +1,5 @@
 ![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/ff-index.png)
-# FeedForward - The quiz Social Network
+# FeedForward - The Quiz Social Network
 FeedForward is an innovative Learning Management System built with multi-memory architecture. This progressive web app is coded in fullstack Javascript and support DOM storage as much as remote storage database. FeedForward permit to create a Quiz in a few minutes, on the first version 4 languages (French, Arabic, Hebrew, English) are available. 
 
 The text and images uploaded to the quiz are instantly shown on screen in client side and without server interaction (serverless). 
