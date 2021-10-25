@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=540, initial-scale=0.7, maximum-scale=1, minimum-scale=0.7, user-scalable=no">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" id="bootstrap-css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
+ </head>
+ <body class="bodylogin">
+  <div class="container-fluid">
+   <div class="row justify-content-center">
+    <div class="pd col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2" style="margin-top:4em;">
+     <div class="card">
+      <h2 id="heading">
+       <img src="images/QUIZ3.png" style="width:50%;height:50%;" alt="logo big" />
+      </h2>
+      <form id="login" class="login" method="post" action="#">
+       <fieldset class="bodylogin">
+        <div class="form-card">
+         <div class="form-wrapper">
+          <label class="lang-nomdutilisateur fieldlabels">Nom d'utilisateur : </label>
+          <input type="text" name="uname" class="lang-nomdutilisateurplaceholder form-control" placeholder="Nom d'utilisateur/email" required="" />
+         </div>
+         <div class="form-wrapper">
+          <label class="lang-motdepasse fieldlabels">Mot de passe</label>
+          <input type="password" name="pwd" class="lang-motdepasseplaceholder form-control" placeholder="Mot de passe" required="" />
+         </div>
+        </div>
+        <input type="button" name="login" class="lang-login action-button-login" value="Connexion" />
+        <input type="button" name="register" class="lang-titreenregistrezvous action-button-login left" value="S'enregistrer" />
+       </fieldset>
+       <input type="hidden" name="fingerprint" class="fp" value="" />
+      </form>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/lang.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/ripemd160.js"></script>
+  <script src="js/fp.min.js"></script>
+  <script src="js/login.js"></script>
+ </body>
+</html>

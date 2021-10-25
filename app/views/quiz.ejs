@@ -1,0 +1,243 @@
+<%
+  var myurl ="https://feedforward.ml/";
+  var to_decode =function(str) {
+  	//\u200E
+     return str.replace(/&/g, '&‎').
+       replace(/</g, '&lt;').  //empty chars
+       replace(/"/g, '‎\"').
+       replace(/'/g, '‎‎\'');
+  }
+    var currenturl = myurl+'q'+myid;
+    var infinsec =function (str){
+     if(parseInt(str)>=0){
+     tr = str+' s';
+     }else{
+     tr = str;
+     }
+     return tr;
+    }
+    var starnumarray = {'0':'<span class="fa fa-star starrating"></span>&nbsp;<span class="fa fa-star starrating"></span>&nbsp;<span class="fa fa-star starrating"></span>&nbsp;<span class="fa fa-star starrating"></span>&nbsp;<span class="fa fa-star starrating"></span>','1':'<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starrating"></span>&nbsp;<span class="fa fa-star starrating"></span>&nbsp;<span class="fa fa-star starrating"></span>&nbsp;<span class="fa fa-star starrating"></span>','2':'<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starrating"></span>&nbsp;<span class="fa fa-star starrating"></span>&nbsp;<span class="fa fa-star starrating"></span>','3':'<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starrating"></span>&nbsp;<span class="fa fa-star starrating"></span>','4':'<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starrating"></span>','5':'<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starratingy"></span>&nbsp;<span class="fa fa-star starratingy"></span>'};
+  %>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://feedforward.ml/images/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://feedforward.ml/images/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://feedforward.ml/images/fav/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://feedforward.ml/images/fav/favicon-16x16.png">
+    <link rel="manifest" href="https://feedforward.ml/images/fav/site.webmanifest">
+    <link rel="mask-icon" href="https://feedforward.ml/images/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://feedforward.ml/images/fav/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="FeedForward">
+    <meta name="application-name" content="FeedForward">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-TileImage" content="https://feedforward.ml/images/fav/mstile-144x144.png">
+    <meta name="msapplication-config" content="https://feedforward.ml/images/fav/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="<%= to_decode(quiz.description); %>" />
+    <meta name="keywords" content="<%= uname %>,<%= to_decode(quiz.tagsinput); %>,<%= to_decode(quiz.categorie); %> Feed Forward, FeedForward">
+    <meta name="robots" content="index,follow">
+    <meta name="copyright" content="<%= uname %> Copyright Lombard Web services">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<%= to_decode(quiz.intitule); %> - FeedForward" />
+    <meta property="og:site_name" content="www.feedforward.ml"/>
+    <meta property="og:url" content="<%= currenturl; %>" />
+    <meta property="og:description" content="<%= to_decode(quiz.description); %>" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="article:author" content="<%= uname %>" />
+    <meta property="og:image" content="<%= myurl+quiz.imagepresentation %>" />
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description" content="<%= to_decode(quiz.description); %>"/>
+    <meta name="twitter:title" content="<%= to_decode(quiz.intitule); %> - FeedForward"/>
+    <meta name="twitter:domain" content="www.feedforward.ml"/>
+    <meta name="twitter:image" content="<%= myurl+quiz.imagepresentation %>"/>
+    <meta name="viewport" content="width=540, initial-scale=0.7, maximum-scale=0.7, minimum-scale=0.7, user-scalable=no">
+    <title>FeedForward <%= to_decode(quiz.intitule); %></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" id="bootstrap-css">
+    <link rel="stylesheet" href="css/style-create-quiz.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="js/purify.js"></script>
+    <script src="js/jquery3.min.js"></script>
+    <script src="js/bootstrap5.min.js"></script>
+    <script src="js/timingfield.js"></script>
+    <script src="js/tagsinput.js"></script>
+    <script src="js/typeahead.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script>myobjh = '<%- encodeURIComponent(escape(JSON.stringify(quiz)));  %>';</script>
+    <!-- Debug <script>myobjh = '<%-  encodeURIComponent(to_decode(JSON.stringify(quiz)));  %>';</script>-->
+  </head>
+  <body class="bodylogin">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="pdqrquiz col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+          <div class="card">
+            <h2 id="heading" class=""><%= to_decode(quiz.intitule); %></h2>
+            <br>
+            <fieldset id="fs1">
+              <div class="quizcontainer1">
+                <div id="quizq">
+                  <div class="containerimgquiz">
+                    <div class="container_image" >
+                      <img src="<%= quiz.imagepresentation %>" alt="imagepresentation" style="border-radius:2rem;height:100%;width:100%"/>
+                      <div class="play-button"></div>
+                    </div>
+                  </div>
+                  <!-- debut de form wrapper -->
+                  <div class="form-wrapper">
+                    <div class="coltopquiz">
+                      <div class="colonnequiztop">
+                        <div class="quizstar">
+                          <%- starnumarray[starnum]; %>
+                        </div>
+                      </div>
+                      <div class="colonnequiztop">
+                        <div style="text-align:right;" class="coltopquizlike"><span class="containerresultscaptiontopleft">
+                          <span class="fa fa-thumbs-up"></span> <span>(<%= likecount %>)</span> </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="categorietimingurl">
+                      <div class="categorietimingurldiv"><b class="lang-auteur">Auteur </b>&nbsp;:&nbsp;<%= uname %></div>
+                      <div class="categorietimingurldiv"><b class="lang-myquizduree">Durée </b>&nbsp;:&nbsp;<%= infinsec(to_decode(quiz.timing)); %> </div>
+                      <div class="categorietimingurldiv"><b class="lang-categoriettseul">Categorie</b>&nbsp;:&nbsp;<%= to_decode(quiz.categorie); %></div>
+                      <div class="categorietimingurldiv"><b class="lang-tag">Tag(s)</b>&nbsp;:&nbsp;<%= to_decode(quiz.tagsinput); %></div>
+                      <div class="categorietimingurldiv"><b class="lang-connexe">Connexe : </b>&nbsp;:&nbsp;<%= to_decode(quiz.youtubeurl); %></div>
+                    </div>
+                    <div class="descriptionquiz"><%= to_decode(quiz.description); %></div>
+                    <div class="datequiz"><%= datequiz %></div>
+                    <!-- fin de div form-wrapper-->
+                  </div>
+                </div>
+              </div>
+              <!-- fin de div quizcontainer-->
+              <div class="shareallplatformcontainer">
+                <div class="action-button-share" style="text-align:center;vertical-align:middle;display:inline-block;margin:auto;float:left;">
+                  <img src="images/QUIZ2.png" alt="FeedForward Social share" width="10%" />&nbsp;<span class="lang-partager"></span>
+                </div>
+              </div>
+              <hr class="quizpreshr">
+              <div style="width:100%;display:flex;margin-top:2em;justify-content: space-between" id="forceshow">
+                <div class="action-button fb-share-button">
+                  <a data-js="twitter-share">
+                    <svg viewBox="0 0 12 12" preserveAspectRatio="xMidYMid meet">
+                      <path class="svg-icon-path" d="M9.1,0.1V2H8C7.6,2,7.3,2.1,7.1,2.3C7,2.4,6.9,2.7,6.9,3v1.4H9L8.8,6.5H6.9V12H4.7V6.5H2.9V4.4h1.8V2.8 c0-0.9,0.3-1.6,0.7-2.1C6,0.2,6.6,0,7.5,0C8.2,0,8.7,0,9.1,0.1z"></path>
+                    </svg>
+                    <span class="lang-partager">Partager</span>
+                  </a>
+                </div>
+                <div class="action-button tw-share-button">
+                  <a>
+                    <svg viewBox="328 355 335 276" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M 630, 425A 195, 195 0 0 1 331, 600A 142, 142 0 0 0 428, 570A  70,  70 0 0 1 370, 523A  70,  70 0 0 0 401, 521A  70,  70 0 0 1 344, 455A  70,  70 0 0 0 372, 460A  70,  70 0 0 1 354, 370A 195, 195 0 0 0 495, 442A  67,  67 0 0 1 611, 380A 117, 117 0 0 0 654, 363A  65,  65 0 0 1 623, 401A 117, 117 0 0 0 662, 390A  65,  65 0 0 1 630, 425Z" style="fill:#ffffff;"/>
+                    </svg>
+                    <span class="lang-partager">Partager</span>
+                  </a>
+                </div>
+                <div class="action-button lnkdn-share-button">
+                  <a>
+                    <svg viewBox="0 50 512 512" >
+                      <path fill="#ffffff" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+                        C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+                        M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+                        c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+                        s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
+                    </svg>
+                    <span class="lang-partager">Partager</span>
+                  </a>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset id="fs2" style="display:none;">
+              <div class="quizcontainer">
+                <div id="quizq0">
+                  <div class="containerimgquiz">
+                    <div class="container_image"></div>
+                  </div>
+                  <!-- debut de form wrapper -->
+                  <div class="form-wrapper">
+                    <div class="coltopquiz">
+                      <div class="colonnequiztop">
+                        <div class="quiznumeroquestion">question X/X</div>
+                      </div>
+                      <div class="colonnequiztop">
+                        <div style="text-align:right;" class="coltopquiztime">00:00:00</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- fin de div form-wrapper-->
+                </div>
+                <!-- fin de div quizqx-->
+                <div class="conteneurcolonnesquizbasdepage">
+                  <div class="columnquizbasdepage">
+                    <div class="boutonprecedentquizbasdepage"><</div>
+                  </div>
+                  <div class="columnquizbasdepage">
+                    <div class="textecentralquizbasdepage">Quiz</div>
+                  </div>
+                  <div class="columnquizbasdepage">
+                    <div class="boutonsuivantquizbasdepage">></div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin de div quizcontainer-->
+            </fieldset>
+            <input type="hidden" name="fingerprint" value="" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="messagemodal">Les questions s'ajoutent par ordre croissant.</p>
+      </div>
+    </div>
+    <!-- /Modal -->
+    <!--validation page 1-->
+    <script src="js/auth.js"></script>
+    <script src="js/ripemd160.js"></script>
+    <script src="js/fp.min.js"></script>
+    <script src="js/dummy_images.js"></script>
+    <script src="js/lang.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/script-create-quiz.js"></script>
+    <script src="js/quiz.js"></script>
+    <script>
+      var urltoshare = window.location.href;
+      $(document).on('click', '.action-button-share', function() {
+        if (navigator.share) {
+          navigator.share({
+            title: document.title,
+            text: "FeedForward  - <%= to_decode(quiz.intitule); %>",
+            url: urltoshare
+          })
+          .then(() => console.log('Successful share'))
+          .catch(error => console.log('Error sharing:', error));
+        }else{
+        navigator.clipboard.writeText(urltoshare);
+        }
+       }); 
+      $(document).on('click', '.tw-share-button', function() {
+        var twitterWindow = window.open('https://twitter.com/share?url=' + urltoshare, 'twitter-popup', 'height=350,width=600');
+        if(twitterWindow.focus) { twitterWindow.focus(); }
+          return false;
+      });
+      $(document).on('click', '.fb-share-button', function() {
+           window.open('https://www.facebook.com/sharer/sharer.php?u=' + urltoshare,
+               'facebook-share-dialog',
+               'width=800,height=600'
+           );
+       }); 
+      $(document).on('click', '.lnkdn-share-button', function() {
+           window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + urltoshare,
+               'linkedin-share-dialog',
+               'width=800,height=600'
+           );
+       }); 
+    </script>
+  </body>
+</html>

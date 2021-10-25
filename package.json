@@ -1,0 +1,33 @@
+{
+  "name": "FeedForward",
+  "version": "1.0.0",
+  "description": "The best AI powered Quiz Platform",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: aucun test effectués\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lombard-Web-Services/FeedForward.git"
+  },
+  "keywords": [
+    "leveldb",
+    "FeedForward"
+  ],
+  "author": "Thibaut LOMBARD <contact@lombard-web-services.com> (https://lombard-web-services.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lombard-Web-Services/FeedForward/issues"
+  },
+  "homepage": "https://feedforward.ml",
+  "dependencies": {
+    "ejs": "*",
+    "express": "*",
+    "ajv": "*",
+    "level": "*",
+    "http": "*",
+    "https": "*",
+    "fs": "*",
+    "pm2": "*"
+  }
+}

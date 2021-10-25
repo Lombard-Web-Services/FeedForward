@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://feedforward.ml/images/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://feedforward.ml/images/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://feedforward.ml/images/fav/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://feedforward.ml/images/fav/favicon-16x16.png">
+    <link rel="mask-icon" href="https://feedforward.ml/images/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://feedforward.ml/images/fav/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="FeedForward">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="application-name" content="FeedForward">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-TileImage" content="https://feedforward.ml/images/fav/mstile-144x144.png">
+    <meta name="msapplication-config" content="https://feedforward.ml/images/fav/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="The first platform for e-learning with Quiz. The best AI powered quiz Social Network. Lets get started by passing a quiz or create your own one here." />
+    <meta name="keywords" content="Social network, Feed Forward, FeedForward, AI powered, Quiz Platform, e-learning, Learning Management System">
+    <meta name="robots" content="index,follow">
+    <meta name="copyright" content="Thibaut Lombard Copyright Lombard Web services">  
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FeedForward.ml, the best AI powered Quiz Social Network" />
+    <meta property="og:site_name" content="www.feedforward.ml"/>
+    <meta property="og:url" content="https://www.feedforward.ml" />
+    <meta property="og:description" content="The first platform for e-learning with Quiz. The best AI powered quiz Social Network. Lets get started by passing a quiz or create your own one here." />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="article:author" content="Lombard Web Sevices" />
+    <meta property="og:image" content="https://www.feedforward.ml/images/og.png" />
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description" content="The first platform for e-learning with Quiz. The best AI powered quiz Social Network. Lets get started by passing a quiz or create your own one here."/>
+    <meta name="twitter:title" content="FeedForward.ml, the best AI powered Quiz Social Network"/>
+    <meta name="twitter:domain" content="www.feedforward.ml"/>
+    <meta name="twitter:image" content="https://www.feedforward.ml/images/tw-og.png"/>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/bootstrap5.min.css" id="bootstrap-css">
+    <link rel="stylesheet" href="css/landing.css">
+   	<link rel="manifest" href="manifest.json">
+    <script src="js/jquery3.min.js"></script>
+    <script src="js/bootstrap5.min.js"></script>
+    <script src="js/lang.js"></script>
+    <script>
+      $(document).ready(function (){
+      var annee0 = 'Lombard Web Services Copyright &copy; ';
+      var annee = 2021; 
+      var year = new Date(); if(annee == year.getFullYear()) year = year.getFullYear(); else year = annee + ' - ' + year.getFullYear(); 
+      an = $('.year');
+      an.html(annee0+year);
+      $(document).on('click', '.action-button-login-landing', function() {
+      document.location='login';
+      });
+      $(document).on('click', '.closenotice', function() {
+      	$('.gdpr-notice').css('display', 'none');
+      });
+      if (location.protocol !== 'https:') {
+        location.replace('https://feedforward.ml');
+      }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="topright"><select id="country_select" class="custom-select"><span class="focus"></span>
+        </select>
+      </div>
+      <div class="image-holder">
+        <img src="images/form-wizard.png" alt="">
+      </div>
+      <div class="form-content">
+        <div id="wizard">
+          <section id="landing" >
+            <div class="landinglogo">
+              <img src="images/QUIZ3.png" style="width:50%;height:50%;" alt="FeedForward, le réseau social du Quiz" /> 
+            </div>
+            <div class="h3_landingcontainer">
+              <h3 class="lang-slogan"></h3>
+            </div>
+            <div class="form-wrapper">
+              <input type="button" name="login" class="lang-conreg action-button-login-landing" value="Connection Enregistrement">
+            </div>
+          </section>
+        </div>
+        <div class="landingfooter">
+          <span class="year"></span>
+        </div>
+      </div>
+    </div>
+  <div class="gdpr-notice">
+    <div class="lang-rgpd gdprs-notice__text">Conformément à la loi sur la Réglementation Générale sur la Protection des Données (RGPD) vous disposez d'un droit de rectification et de modification des données que nous sauvegardons, en cliquant sur le bouton suivant vous acceptez que nous enregistrons des données pour faciliter le fonctionnement du site et éventuellement tracer vos activités.</div>
+   <div class="noticefloatright"> <button class="lang-jevalide btn btn-success closenotice">Je valide</a></div>
+  </div>
+  <script>
+  //Trigger the SW install prompt and handle user choice
+    if ('serviceWorker' in navigator) {  
+      navigator.serviceWorker.register('/sw.js')
+        .then(function (registration) {    
+          console.log('ServiceWorker enregistré: ', registration.scope);  
+        }).catch(function (err) {    
+          console.log('Le ServiceWorker a échoué à l\'enregistrement: ', err);  
+        });
+    }
+   </script>
+  </body>
+</html>

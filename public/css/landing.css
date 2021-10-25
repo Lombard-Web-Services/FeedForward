@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.eot);
+  src: local('☺'), url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf') format('truetype'), url('../fonts/Montserrat-Regular.svg') format('svg');
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Montserrat-medium;
+  src: url(../fonts/Montserrat-Medium.eot);
+  src: local('☺'), url('../fonts/Montserrat-Medium.woff') format('woff'), url('../fonts/Montserrat-Medium.ttf') format('truetype'), url('../fonts/Montserrat-Medium.svg') format('svg');
+  font-weight: 400;
+  font-style: normal
+}
+
+h2 {
+  font-family: Montserrat-medium;
+  font-weight: 600;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+}
+
+.wrapper .image-holder {
+  width: 65.78%;
+}
+
+.wrapper .form-content {
+  width: 34.22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4.3%;
+  padding-right: 4.3%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.wrapper .form-content {
+  width: 34.22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4.3%;
+  padding-right: 4.3%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.landinglogo {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.landingfooter {
+  text-align: center;
+  font-weight: 300;
+  font-size: 2vmin;
+  bottom: 0.5rem;
+  width: 74%;
+  color: grey;
+  display: inline-block;
+  margin: auto;
+  position: absolute;
+}
+
+.landingfooter span {
+  text-align: center;
+  width: 100%;
+}
+
+.action-button-login-landing {
+  background: #006DBF;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 0px 10px 5px;
+  float: right;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  height: 3rem;
+  width: 100%;
+  border-radius: 2rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.action-button-login-landing:hover {
+  background: #21759b;
+}
+
+.form-content {
+  background: rgb(252, 252, 252);
+  background: -moz-linear-gradient(top, rgba(252, 252, 252, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(252, 252, 252, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(252, 252, 252, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(252, 252, 252, 1) 100%);
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(252, 252, 252, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#fcfcfc', GradientType=0);
+  background-size: cover;
+}
+
+.h3_landingcontainer {
+  display: block;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.7em;
+  color: #21759B;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 1.2em;
+  font-family: 'Montserrat-medium';
+}
+
+.custom-select {
+  width: 4rem;
+  min-width: 3rem;
+  max-width: 4rem;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: transparent;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  position: relative;
+  /* Replace Default styling (arrow) */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 4 5"><path fill="%2321759B" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 98%;
+}
+
+.custom-select:focus,
+.custom-select:hover {
+  outline: none;
+  border: 0px solid #089DBF;
+}
+
+.topright {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  width: 4em;
+  background: transparent;
+  text-align: right;
+  z-index: 1;
+}
+
+.image-holder {
+  background: url("../images/form-wizard.png") center center;
+  background-size: cover;
+}
+
+.image-holder img {
+  display: none;
+}
+
+.gdpr-notice {
+  background-color: #089DBF;
+  position: sticky;
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  max-height: 4rem;
+  min-height: 3.8rem;
+  padding: .5rem 1rem;
+  border-top: 1px solid #E6E6FA;
+  z-index: 100;
+  text-align: center;
+}
+
+.gdprs-notice__text {
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 200;
+  font-size: 1.5vmin;
+  width: 70vw;
+  display: block;
+  position: relative;
+  float: left;
+  max-height: 3.8rem;
+  background-color: #089DBF;
+  vertical-align: middle;
+}
+
+.noticefloatright {
+  position: relative;
+  display: block;
+  float: right;
+  vertical-align: middle;
+  margin: auto;
+  max-height: 3.8rem;
+}
+
+.closenotice {
+  width: 100%;
+  background: #48a50d;
+  border: 2px white;
+  border-radius: 2rem;
+  margin-left: 3vw;
+}
+
+.closenotice:hover {
+  background: #6cff0f;
+}
+
+@media (max-width: 1199px) {
+  #landing {
+    overflow-y: hidden;
+  }
+  .landingfooter {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2vmin;
+    bottom: 0;
+    width: 100%;
+    color: grey;
+    display: contents;
+    margin: auto;
+    position: absolute;
+  }
+  .wrapper {
+    display: flex;
+    height: 100vh;
+  }
+  .wrapper .image-holder {
+    display: none;
+    width: 100%;
+  }
+  .wrapper .form-content {
+    width: 100%;
+    height: 100vh;
+  }
+  .wizard {
+    width: 50%;
+    margin: auto;
+  }
+  .social {
+    position: static;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    overflow-y: hidden;
+  }
+  .landingfooter {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2vmin;
+    bottom: 0;
+    width: 100%;
+    color: grey;
+    display: contents;
+    margin: auto;
+    position: absolute;
+  }
+  h3 {
+    font-size: 1.7em;
+    color: #21759B;
+  }
+  .image-holder {
+    background: none;
+  }
+  .image-holder img {
+    display: none;
+  }
+  .wrapper {
+    display: flex;
+    height: 100vh;
+  }
+  .wrapper .image-holder {
+    height: 0px;
+  }
+  .wrapper .form-content {
+    height: 100vh;
+    overflow: hidden;
+    padding: 35px 20px;
+  }
+  .wizard {
+    width: 100%;
+    height: auto;
+  }
+}

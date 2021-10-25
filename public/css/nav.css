@@ -1,0 +1,151 @@
+/*
+ * License :  GNU General Public License - GPL3
+*/
+
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+}
+.absolute-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar-nav{
+flex-direction: row;
+}
+.navigation{
+}
+
+.nav-item{
+display:inline-block;
+}
+.navigation ul li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 0.2rem;
+    left: 50%;
+    position: absolute;
+    background: #006DBF;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.navigation ul li a:hover:after { 
+  width: 100%; 
+  background: #006DBF;
+  left: 0; 
+}	
+.navigation .navbar-light .navbar-nav .nav-item ul li:active{
+    color: #02a6C4;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 3vw;
+  width: auto;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.5);
+}
+.navigation .navbar-light .navbar-nav .nav-item .fa{
+font-size:2em;
+color:#006DBF;
+}
+.navbar-nav>li.nav-item.active>a.nav-link .fa{
+color:#02a6C4!important;
+}
+.navbar-nav>li.nav-item.active>a.nav-link:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 0.2rem;
+    left: 0;
+    position: absolute;
+    background: #02a6C4;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 100%;
+}
+.navigation .navbar-light .navbar-nav .nav-item .fa:hover{
+color:#02a6C4;
+}
+.navigation .navbar-light .navbar-nav .nav-item{
+padding-right:0.5em;
+padding-left:0.5em;
+}
+
+ .navbar-light .navbar-nav .nav-item .button_icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    float: right;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #006DBF;
+    color: #02a6C4;
+    text-decoration: none;
+}
+.navigation{
+background-color: #FEFEFE;
+border-bottom: 0.05rem solid #006dbf;
+}
+.navigation .nav-link{
+text-align:center;
+}
+
+@media (min-width: 400px)
+.navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: auto;
+}
+.navigation .navbar-brand {
+  background-color: transparent;
+}
+.nav-item a{ display: inline-block;}
+
+.creerlequiz:before {
+    font-family: FontAwesome;
+    content: "\f0e7";
+}
+.navigation ul li{
+    display: inline-block;
+    list-style-type: none;
+    position: relative;
+}
+.recenter{
+margin-right:-1rem;
+}
+.navbarText{
+display:block;
+}
+
+.navbar-nav .fa-signout .exit {
+    font-size: 2em;
+    color: #006DBF;
+}
+.navigation .navbar-light .navbar-nav .fa .exit:hover {
+    font-size: 2em;
+    color: #02a6C4;
+}
+/*langage selection*/
+.custom-select {
+  position: relative;
+  width:4rem;
+}
+.styledisplaynone{
+display:none;
+}

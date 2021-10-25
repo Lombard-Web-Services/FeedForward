@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+	<meta name="viewport" content="width=540, initial-scale=0.7, maximum-scale=0.7, minimum-scale=0.7, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css" id="bootstrap-css">
+    <link rel="stylesheet" href="css/style-create-quiz.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="js/purify.js"></script>
+    <script src="js/jquery3.min.js"></script>
+    <script src="js/bootstrap5.min.js"></script>
+    <script src="js/timingfield.js"></script>
+    <script src="js/tagsinput.js"></script>
+    <script src="js/typeahead.js"></script>
+    <script src="js/popper.min.js"></script>
+  </head>
+  <body class="bodylogin">
+  <!--<body class="bodylogin" oncopy="return false" oncut="return false" onpaste="return false">-->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="pd col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+          <div class="card">
+            <h2 id="heading" class="lang-creerunquiz">Créer un quiz</h2>
+            <form id="create-quiz" class="create-quiz" method="post" action="#">
+              <!-- progressbar -->
+              <ul id="progressbar">
+                <li class="active startariane" id="creerlequiz"><strong class="lang-creerlequiz">Créer le quiz</strong></li>
+                <li id="ajouterlesquestions"><strong class="lang-ajouterquestion">Ajouter les questions</strong></li>
+                <li id="testerlequiz"><strong class="lang-testerquiz">Tester le quiz</strong></li>
+                <li id="enregistrement" class="endariane"><strong class="lang-enregistrement">Enregistrement</strong></li>
+              </ul>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <br> <!-- fieldsets -->
+              <fieldset id="fs1">
+                <div class="form-card">
+                  <div class="rowtitlestep">
+                    <div class="col-7">
+                      <h2 class="lang-h2creerlequiz fs-title">Créer le quiz:</h2>
+                    </div>
+                    <div class="col-5">
+                      <h2 class="lang-steps1on4 steps">Etape 1 / 4</h2>
+                    </div>
+                  </div>
+                  <div class="form-wrapper">
+                    <label class="lang-labelimagedepresentation fieldlabels">Image de présentation : *</label> 
+                    <div style="margin:auto;">
+                      <div>			  						  
+                        <label for="image_uploads0" class="lang-selectionimagepresentation label_imagedepresentation action-button-login" id="imageuploadform0">Sélectionner une image à uploader (PNG, JPG)</label>
+                        <input type="file" name="image_uploads0" accept=".jpg, .jpeg, .png" class="iu iux0" id="image_uploads0" hidden>
+                        <input type="hidden" id="b64imagedepresentation0" value="" />
+                      </div>
+                      <div class="preview_imagedepresentation formimagedepresentation preview_imagedepresentationx0" id="preview_imagedepresentationx0">
+                        <p class="lang-nofileselectedimagedepresentation">Aucun fichier sélectionné pour le moment</p>
+                      </div>
+                      <div>
+                        <!--<button class="action-button">Uploader</button>-->
+                      </div>
+                    </div>
+                    <!-- fin de div design -->
+                  </div>
+                  <div class="form-wrapper" style="margin-top:2em;">
+                    <label class="lang-intitulelabel fieldlabels">Intitulé: *</label> 
+                    <input type="text" name="intitule" class="lang-inputintitule form-control" placeholder="Intitulé du quiz" required="" id="intitule" />							
+                  </div>
+                  <div class="form-wrapper">
+                    <label class="lang-descriptionlabel fieldlabels">Description: *</label> 
+                    <textarea name="description" class="lang-textareadescription form-control textarea" placeholder="Décrivez le quiz en quelque mots .. 500 caractères autorisés" required="" rows="5" cols="33" maxlength="500" id="description"></textarea> 
+                  </div>
+                  <div class="form-wrapper" style="display:block;">
+                    <label class="lang-duree fieldlabels">Durée: (0 = ∞)</label> 
+                  </div>
+                  <div class="form-wrapper" style="display:inline-block;">
+                    <div style="margin:auto;display:inline-block;">
+                      <input type="text" name="timing" class="timing" id="timing" />
+                    </div>
+                  </div>
+                  <div class="form-wrapper">
+                    <label class="lang-youtubeurl fieldlabels">URL Youtube: (facultatif)</label> <input type="text"  class="form-control"  name="urlyoutube" placeholder="https://youtube.com/watch?v=XXXXXXXXXXX" id="youtubeurl" /> 
+                  </div>
+                  <div class="form-wrapper">
+                    <label class="lang-labelcategory fieldlabels">Catégorie: *</label> 
+                    <input type="text" name="categorie" class="lang-inputcategory form-control" placeholder="Saisir la catégorie" required="" id="categorie" />							
+                  </div>
+                  <div class="form-wrapper">
+                    <label class="lang-tagslabel fieldlabels">tag(s): (facultatif)</label> 
+                    <input type="text" name="tags" class="lang-inputtags" data-role="tagsinput" value="" placeholder="Entrer pour valider" id="tagsinput">	              
+                  </div>
+                </div>
+                <hr>
+                <input type="button" name="next" class="lang-boutonsuivant next action-button next1" value="Suivant" />
+              </fieldset>
+              <fieldset id="fs2">
+                <div class="form-card">
+                  <div class="rowtitlestep">
+                    <div class="col-7">
+                      <h2 class="lang-informations fs-title">Informations :</h2>
+                    </div>
+                    <div class="col-5">
+                      <h2 class="lang-steps2on4 steps">Etape 2 / 4</h2>
+                    </div>
+                  </div>
+                  <div class="questionpancontainer">
+                    <div class="questionpan1">
+                      <div class="aflouter1" id="aflouter1">
+                        <label class="lang-questionx fieldlabelsquestion">Question 1</label> <input type="hidden"  class="form-control"  name="numeroquestion" /> 
+                        <label class="lang-dureequestions fieldlabels" style="display:inline-block;">Durée question: (hh:mm:ss)</label> 
+                        <div class="splitteddiv">
+                          <div class="column50">
+                            <div class="creauti">
+                              <label class="switch">
+                              <input type="checkbox" name="dureequestionauto1" id="dureequestionauto1" checked>
+                              <span class="slider round"></span></label>
+                              <span class="fieldlabels" style="margin-left:1em;line-height:2em;">Auto</span>
+                            </div>
+                          </div>
+                          <div class="column50">
+                            <input id="timequestionnonauto1" type="time"  min="0:00:00" max="0:59:59" step="2" class="ignore" value="00:00:00" disabled>
+                          </div>
+                        </div>
+                        <label class="lang-questionindicelabel fieldlabels">Question: *([I]indice[/I])</label>
+                        <div class="pdquiz text-center">
+                          <!-- debut quiz -->
+                          <div id="widget" class="ta">
+                            <div id="overlay" style="padding-right: 0.5em;">
+                              <button class="action-button" id="cleartextarea1">X</button>                           
+                              <button class="lang-indicebutton action-button" id="indice1">[Indice]</button>
+                              <button class="action-button" id="reponsejuste1">[RJ]</button>
+                              <button class="action-button" id="reponsefausse1">[RF]</button>
+                              <button class="action-button" id="Qquestion1">Q</button>
+                            </div>
+                            <textarea name="question1" class="lang-question1textarea form-control ta textareafullquestion1" id="question1" placeholder="Ajouter votre question ici.. 1000 caractères autorisés" required="" rows="5" cols="33" maxlength="1000"></textarea>
+                          </div>
+                        </div>
+                        <!-- fin quiz -->
+                        <!-- debut de image question -->
+                        <div class="form-wrapper" style="margin-bottom:4em;text-align:left;">
+                          <label class="lang-imagedelaquestionlabel fieldlabels">Image de la question: </label> 
+                          <div style="margin:auto;">
+                            <div>
+                              <label for="image_uploads1" class="lang-selectionimagepresentation label_imagedepresentation action-button-login" id="imageuploadform1">Sélectionner une image à uploader (PNG, JPG)</label>
+                              <input type="file" id="image_uploads1" name="image_uploads1" accept=".jpg, .jpeg, .png" class="iu iux1" id="iux1" hidden>
+                              <input type="hidden" id="b64imagedepresentation1" value="" />
+                            </div>
+                            <div class="preview_imagedepresentation formimagedepresentation preview_imagedepresentationx1" id="preview_imagedepresentationx1">
+                              <p class="lang-nofileselectedimagedepresentation">Aucun fichier sélectionné pour le moment</p>
+                            </div>
+                            <div>
+                              <!--<button class="action-button-upload uploadimagequestion1" style="margin-bottom:2em;">Uploader</button>-->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- fin div class aflouter -->                            
+                      <div style="width:100%;display:flex;justify-content: space-between;margin-top:0;" class="addremovequestionbutton">
+                        <input type="button" name="addquestion1" id="addquestion1" class="action-button addquestion1" value="+" /> 
+                        <input type="button" name="removequestion1" id="removequestion1" class="action-button removequestion1" value="-" /> 
+                      </div>
+                    </div>
+                    <!-- fin de questionpan -->    
+                  </div>
+                  <!-- fin de questionpancontainer (ci-dessus) -->                          
+                  <!-- separator -->    
+                </div>
+                <!-- fin de image question -->   
+                <hr>
+                <div style="width:100%;display:flex;justify-content: space-between;margin-top:2em;" class="forceshow">
+                  <input type="button" name="previous" class="lang-boutonprecedent previous action-button-previous left previous2" value="Précédent" /> 
+                  <input type="button" name="next" class="lang-boutonsuivant next action-button next2" value="Suivant" /> 
+                </div>
+              </fieldset>
+              <fieldset id="fs3">
+                <div class="quizcontainer">
+                  <div id="quizq0">
+                    <div class="containerimgquiz">
+                      <div class="container_image"></div>
+                    </div>
+                    <!-- debut de form wrapper -->
+                    <div class="form-wrapper">
+                      <div class="coltopquiz">
+                        <div class="colonnequiztop">
+                          <div class="quiznumeroquestion">question X/X</div>
+                        </div>
+                        <div class="colonnequiztop">
+                          <div style="text-align:right;" class="coltopquiztime">00:00:00</div>
+                        </div>
+                      </div>
+                      <div class="questionquiz">
+
+                      </div>
+                      <br>
+                      <hr>
+                      <!-- fin de radio button -->
+                      <!-- debut de checkbox-->
+                      
+                      <br>
+                      <hr>
+                      <!-- Debut de l'affichage des résultats de la question quiz-->
+                      <div id="result-of-question" class="pulse animated" style="">
+                        <span id="totalCorrect" class="pull-right">Total correct: 2</span>
+                        <table class="table table-sm">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Reponses justes</th>
+                              <th scope="col">Vos réponses</th>
+                              <th scope="col">Résultats</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!-- fin de l'affichage du résultat des question-->
+                      <br>
+                      <hr>
+                    </div>
+                    <!-- fin de div form-wrapper-->
+                  </div>
+                  <!-- fin de div quizqx-->
+                  <div class="conteneurcolonnesquizbasdepage">
+                    <div class="columnquizbasdepage">
+                      <div class="boutonprecedentquizbasdepage">&lt;</div>
+                    </div>
+                    <div class="columnquizbasdepage">
+                      <div class="textecentralquizbasdepage">Quiz</div>
+                    </div>
+                    <div class="columnquizbasdepage">
+                      <div class="boutonsuivantquizbasdepage">&gt;</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- fin de div quizcontainer-->
+                <hr>
+                <div style="width:100%;display:flex;margin-top:2em;justify-content: space-between" class="forceshow">
+                  <input type="button" name="previous" class="lang-boutonprecedent previous action-button-previous left previous3" value="Précédent" /> 
+                  <input type="button" name="next" class="lang-boutonsuivant next action-button next3" value="Suivant" /> 
+                </div>
+              </fieldset>
+              <fieldset id="fs4">
+                <div class="form-card">
+                  <div class="rowtitlestep">
+                    <div class="col-7">
+                      <h2 class="lang-finalstep fs-title">Etape finale:</h2>
+                    </div>
+                    <div class="col-5">
+                      <h2 class="lang-steps4on4 steps">Etape 4 / 4</h2>
+                    </div>
+                  </div>
+                  <div class="purple-text text-center"></div>
+                  <div class="rowtitlestep">
+                    <div class="success-animation">
+                      <div class="loadingquizimage" style="font-size:3em; text-align:center;color:#006DBF;"></div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <input type="hidden" name="fingerprint" value="" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="messagemodal">Les questions s'ajoutent par ordre croissant.</p>
+      </div>
+    </div>
+    <!-- /Modal -->
+    <script src="js/auth.js"></script>
+    <script src="js/lang.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/ripemd160.js"></script>
+    <script src="js/fp.min.js"></script>
+    <script src="js/dummy_images.js"></script>
+    <script src="js/script-create-quiz.js"></script>
+    <script src="js/markup.js"></script>
+    <script src="js/notif.js"></script>
+  </body>
+</html>
