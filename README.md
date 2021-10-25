@@ -34,6 +34,7 @@ Example :
 * Multithreaded for faster processing
 
 ## Technologies
+While the app is used in localhost or intranet network, less than 30ms is needed to search a needle into an haystack of 60 000 records..
 * level
 * ajv 
 * html5
