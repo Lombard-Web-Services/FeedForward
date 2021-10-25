@@ -924,18 +924,6 @@ module.exports = function(app) {
       res.send(userinfo);
     }
   });
-  // admin function delete a user
-  //http://localhost:3000/deluser/bibi/callback/123
-  app.get('/deluser/:uname', async (req, res) => {
-    let uname = req.params.uname;
-    var fulluname = 'user_' + uname;
-    var del = await new Quiz().delrecordsbykey(fulluname, callback);
-    res.set({
-      'Content-Type': 'application/json'
-    });
-    res.send(req.query.callback + '(' + del + ');');
-  });
- 
   // retreive user infos
   app.get('/getuser/:uname/key/:privkey', async (req, res) => {
     var uname = req.params.uname;
