@@ -1,18 +1,24 @@
 ![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/ff-index.png)
 # FeedForward - The quiz Social Network
-FeedForward is an innovative Learning Management System built with multi-memory architecture. This progressive web app is coded in fullstack Javascript and support DOM storage as much as remote storage database. FeedForward permit to create a Quiz in a few minutes, compliant with 4 languages French, Arabic, Hebrew, English. The images uploaded to the quiz are instantly shown on screen in client side and without server interaction, an AI is detecting what type of quiz is it, an algorithm is shuffling each answers while the quiz is started. Once the quiz is created with a specific number of questions chosen, the images are automatically uploaded to the nodejs server on a level database. The Quiz content can be requested through an API in order to retreive the data into various format, blob or direct links.   
+FeedForward is an innovative Learning Management System built with multi-memory architecture. This progressive web app is coded in fullstack Javascript and support DOM storage as much as remote storage database. FeedForward permit to create a Quiz in a few minutes, 4 languages French, Arabic, Hebrew, English are available. 
+
+The text and images uploaded to the quiz are instantly shown on screen in client side and without server interaction (serverless). 
+
+An AI is detecting what type of quiz is it, another algorithm is shuffling each answers while the quiz is started. Once the quiz is created with a specific number of questions chosen, the images are automatically uploaded to the nodejs server on a level database for later use, it is acting as a CDN. 
+
+The Quiz content can be requested through multiples API in order to retreive the data into various format such as text with blob images or direct links.   
 
 ## Example
 ![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/quiz.gif)
 
 ## Features
-You are able to create a quiz, selecting the time of each questions, adding pictures instantly (resized to mobile format: 854x480). Likes, Notes with star ratings, and get notified while a user has passed your quiz with the results obtained.
+You are able to create a quiz, selecting the time of each questions, adding pictures instantly (resized to mobile format: 854x480). Likes, Notes with star ratings, and get noticed while a user has passed your quiz with the results obtained.
 
 ## Low Code Quiz Programming language
-* [Q][/Q] : question tag 
-* [RJ][/RJ] : Return a true answer 
-* [RF][/RF] : Return a false answer 
-* [I][/I] : is an Hint 
+[Q][/Q] : question tag 
+[RJ][/RJ] : Return a true answer 
+[RF][/RF] : Return a false answer 
+[I][/I] : is an Hint 
 Example :
 ```sh
 [Q]What time is it in Istanbul ?[/Q]
