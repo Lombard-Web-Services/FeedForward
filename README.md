@@ -12,7 +12,7 @@ The Quiz content can be requested through multiples API in order to retreive the
 ![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/quiz.gif)
 
 ## Features
-You are able to create a quiz, selecting the time of each questions, adding pictures instantly (resized to mobile format: 854x480). Likes, Notes with star ratings, and get noticed while a user has passed your quiz with the results obtained.
+You are able to create one or more quiz, Question Answer or multiple choices question, to select the time and the duration of each questions, to add pictures instantly (resized to mobile format: 854x480). Likes, Notes with star ratings, and get noticed while a user has passed your quiz with the results obtained. This PWA is MVC compliant.
 
 ## Low Code Quiz Programming language
 [Q][/Q] : question tag 
