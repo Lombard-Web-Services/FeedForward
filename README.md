@@ -16,8 +16,11 @@ You are able to create a quiz, selecting the time of each questions, adding pict
 
 ## Low Code Quiz Programming language
 [Q][/Q] : question tag 
+
 [RJ][/RJ] : Return a true answer 
+
 [RF][/RF] : Return a false answer 
+
 [I][/I] : is an Hint 
 Example :
 ```sh
@@ -76,7 +79,7 @@ This following command permit to load the PWA in background process.
 pm2 --name FeedForward start npm -- start
 ```
 
-## Installing the app
+## Mobile PWA install
 A PWA feature has been coded to facilitate the install .
 * Navigate to the main domain (IE: https://feedforward.ml)
 * Click on the bottom banner of the screen
