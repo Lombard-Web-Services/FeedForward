@@ -5,9 +5,6 @@ const ajv = new Ajv({
   allowUnionTypes: true
 });
 module.exports = function(app) {
-  //pour la configuration du parser dont les pré-chunk lire  : https://codewithhugo.com/parse-express-json-form-body/
-  // todo.js
-  // configuration de la réponse des json post
   jsonparser = express.json();
   app.use(jsonparser);
   app.use(express.urlencoded({
