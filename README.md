@@ -6,7 +6,7 @@ FeedForward is a Learning Management System built with multi-memory architecture
 ![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/quiz.gif)
 
 ## Features
-You are able to create a quiz, selecting the time of each questions, adding pictures instantly (resized to mobile format: 854x480). 
+You are able to create a quiz, selecting the time of each questions, adding pictures instantly (resized to mobile format: 854x480). Likes, Notes with star ratings, and get notified while a user has passed your quiz with the results obtained.
 
 ## Low Code Quiz Programming language
 * [Q][/Q] : question tag 
@@ -16,11 +16,10 @@ You are able to create a quiz, selecting the time of each questions, adding pict
 Example :
 ```sh
 [Q]What time is it in Istanbul ?[/Q]
+[I]The sun is shining[/I]
 [RJ]Morning[/RJ]
 [RF]Afternoon[/RF]
 ```
-
-
 
 ## Functionnalities
 * API Quiz
@@ -52,9 +51,7 @@ Example :
 
 ## Status
 V1 released nightly, waiting for bugs reporting.
-V2 coding.
-
-
+Tested on Android and google chrome, chromium.
 
 ## Usage
 This app is easy to use.
@@ -75,8 +72,7 @@ pm2 --name FeedForward start npm -- start
 A PWA feature has been coded to facilitate the install .
 * Navigate to the main domain (IE: https://feedforward.ml)
 * Click on the bottom banner of the screen
-![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/ff-a2hs-pwa.png)
-![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/ff-appli.jpg)
+![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/ff-a2hs-pwa-ribbon.png)
 
 
 ### Credits & License
@@ -109,5 +105,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ### Bugs
-If you find a bug or someone omited to quote into the licence credits, an unexpected behavior into the PWA, i will make my best to correct fastly, send me an email : 
+I am not perfect, if you find a bug or someone omited to quote into the licence credits, an unexpected behavior into the PWA, i will make my best to correct fastly, send me an email : 
 contact@lombard-web-services.com
