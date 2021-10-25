@@ -22,6 +22,7 @@ You are able to create a quiz, selecting the time of each questions, adding pict
 [RF][/RF] : Return a false answer 
 
 [I][/I] : is an Hint 
+
 Example :
 ```sh
 [Q]What time is it in Istanbul ?[/Q]
