@@ -1,22 +1,48 @@
-# FeedForward
-FeedForward is a Learning Management System built with multi-memory architecture. This web app is coded in fullstack Javascript and support DOM storage as much as remote storage database. 
+![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/ff-index.png)
+# FeedForward - The quiz Social Network
+FeedForward is a Learning Management System built with multi-memory architecture. This progressive web app is coded in fullstack Javascript and support DOM storage as much as remote storage database. FeedForward permit to create a Quiz in a few minutes, compliant with 4 languages French, Arabic, Hebrew, English. The images uploaded to the quiz are instantly shown on screen in client side and without server interaction. Once the quiz is created with a specific number of questions chosen, the images are automatically uploaded to the nodejs server on a level database. the Quiz content can be requested through an API in order to retreive the data into various format, blob or direct links.   
 
 ## Example
 ![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/quiz.gif)
 
-## Functionalities
+## Features
+You are able to create a quiz, selecting the time of each questions, adding pictures instantly (resized to mobile format: 854x480). 
+
+## Low Code Quiz Programming language
+* [Q][/Q] : question tag 
+* [RJ][/RJ] : Return a true answer 
+* [RF][/RF] : Return a false answer 
+* [I][/I] : is an Hint 
+Example :
+```sh
+[Q]What time is it in Istanbul ?[/Q]
+[RJ]Morning[/RJ]
+[RF]Afternoon[/RF]
+```
+
+
+
+## Functionnalities
 * API Quiz
-* Social networks (likes, and Star rating)
+* Social network (likes, and star rating)
 * Lightning fast database storage
-* Responsive
+* Responsive theme 
+* Not minified or uglifyed source code
+* Multilingual
+* Installable as Mobile Application (PWA) directly from the browser 
+* Load balancer included
+* Share on mobile Feature
 
 ## Technologies
 * level
-* AJV 
+* ajv 
 * html5
 * css3
 * Javascript
 * NodeJS
+* jQuery
+* DOMpurify
+* pm2
 
 ## Languages
 * French
@@ -25,16 +51,44 @@ FeedForward is a Learning Management System built with multi-memory architecture
 * English
 
 ## Status
-WIP , V1 Coming soon November.
+V1 released nightly, waiting for bugs reporting.
+V2 coding.
 
-### License
-MIT License
 
-Copyright (c) 2021 Thibaut Lombard
- 
-FeedForward project: Thibaut Lombard (Founder and Project Manager), Asmae Lombard (Country Manager Arabic - MA), Yosr Feki (Content producer), Chafiq El Hammami(e2e Management), Hanane El Meskini (Content tester),  Guilad Levy (translation), Clementine Haddad Levy (translation)
+
+## Usage
+This app is easy to use.
+
+## Server install
+You need to install latest npm and nodejs previously.
+```sh
+npm install
+```
+
+## Loading the app
+This following command permit to load the PWA in background process.
+```sh
+pm2 --name FeedForward start npm -- start
+```
+
+## Installing the app
+A PWA feature has been coded to facilitate the install .
+* Navigate to the main domain (IE: https://feedforward.ml)
+* Click on the bottom banner of the screen
+![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/ff-a2hs-pwa.png)
+![image](https://github.com/Lombard-Web-Services/FeedForward/raw/master/demo/ff-appli.jpg)
+
+
+### Credits & License
+Since this application has been made for educational purpose the source code of the v1 is free to use, rewrite, share, sell, and contributions are welcome to improve the work done.
+
+FeedForward project: Thibaut Lombard (Founder and Project Manager), Asmae Lombard (Project Coordinator,  Arabic translation - MA), Yosr Feki (Content producer - TN), Chafiq El Hammami(e2e Management), Hanane El Meskini (Content tester),  Guilad Levy (Hebrew translation), Clementine Haddad Levy (Hebrew translation)
 
 Credits script used: Szymon Nowak, James Hall, Natalia Davydova, Sanjay Ghemawat (sanjay@google.com) and Jeff Dean (jeff@google.com), Evgeny Poberezkin (Mozilla)
+
+MIT License
+
+Copyright (c) 2021 Thibaut Lombard (contact@lombard-web-services.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -53,3 +107,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+### Bugs
+If you find a bug or someone omited to quote into the licence credits, an unexpected behavior into the PWA, i will make my best to correct fastly, send me an email : 
+contact@lombard-web-services.com
