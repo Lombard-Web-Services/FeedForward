@@ -92,7 +92,7 @@ Since this application has been made for educational purpose the source code of 
 
 FeedForward project: Thibaut Lombard (Founder and Project Manager), Asmae Lombard (Project Coordinator,  Arabic translation - MA), Yosr Feki (Content producer - TN), Chafiq El Hammami(e2e Management), Hanane El Meskini (Content tester),  Guilad Levy (Hebrew translation), Clementine Haddad Levy (Hebrew translation)
 
-Credits script used: Szymon Nowak, James Hall, Natalia Davydova, Sanjay Ghemawat (sanjay@google.com) and Jeff Dean (jeff@google.com), Evgeny Poberezkin (Mozilla), cure53 (DOMpurify),
+Credits script used: Szymon Nowak, James Hall, Natalia Davydova, Sanjay Ghemawat (sanjay@google.com) and Jeff Dean (jeff@google.com), Evgeny Poberezkin (Mozilla), cure53 (DOMpurify), Twitter (Bootstrap3 & 5 , typeahead.js),  Mike Bostock (d3js.org),John Resig(jQuery), Jeff Mott (CryptoJS - ripemd160), Guillaume FREMONT (Timingfield),  Federico Zivolo (popper.min.js),Jörn Zaefferer (jQuery Validation plugin)
 
 MIT License
 
