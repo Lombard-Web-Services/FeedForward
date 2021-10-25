@@ -935,47 +935,8 @@ module.exports = function(app) {
     });
     res.send(req.query.callback + '(' + del + ');');
   });
-  // admin function get all user registered	
-  //http://localhost:3000/getalluser/10/callback/123456
-  app.get('/getalluser/:limit?', async (req, res) => {
-    var callback = req.params.callback;
-    if (callback) {
-      callback = req.params.callback;
-    } else {
-      callback = 'callback';
-    }
-    let limite = req.params.limit;
-    if (limite) {
-      var limit = req.params.limit;
-    } else {
-      var limit = -1;
-    }
-    var getallusers = await new Quiz().getalluser(limit);
-    res.set({
-      'Content-Type': 'application/json'
-    });
-    res.send(req.query.callback + '(' + JSON.stringify(getallusers) + ');');
-  });
-  //http://localhost:3000/getallauth/
-  app.get('/getallauth/', async (req, res) => {
-    var getallauth = await new Quiz().getallauth();
-    res.set({
-      'Content-Type': 'application/json'
-    });
-    res.send(JSON.stringify(getallauth));
-  });
-  // check user auth from fingerprint yes or no
-  //http://localhost:3000/userauth/
-  app.get('/userauth/:userauth', async (req, res) => {
-    let testfingerprint = req.params.userauth;
-    var getuserauth = await new Quiz().getuserauth(testfingerprint);
-    res.set({
-      'Content-Type': 'application/json'
-    });
-    res.send(JSON.stringify(getuserauth));
-  });
+ 
   // retreive user infos
-  //http://localhost:3000/getuser/bibi/key/1vhibzgiz3vjysrgmi2pr395b61suuah/callback/bb
   app.get('/getuser/:uname/key/:privkey', async (req, res) => {
     var uname = req.params.uname;
     var privkey = req.params.privkey;
