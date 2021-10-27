@@ -11,8 +11,6 @@ module.exports = function(app) {
     extended: true
   }));
   // fin de la configuration des réponses json post
-  // chargement de la view
-  var index = require('../controllers/index.server.controller.js');
   // chargement des class api Quiz
   const Quiz = require('../controllers/db.controller.js');
   //authentification
