@@ -46,7 +46,7 @@
     <meta property="og:description" content="<%= to_decode(quiz.description); %>" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="article:author" content="<%= uname %>" />
-    <meta property="og:image" content="<%= myurl+quiz.imagepresentation %>" />
+    <meta property="og:image" itemprop="image" content="<%= myurl+quiz.imagepresentation %>" />
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:description" content="<%= to_decode(quiz.description); %>"/>
     <meta name="twitter:title" content="<%= to_decode(quiz.intitule); %> - FeedForward"/>
