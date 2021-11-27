@@ -64,6 +64,7 @@ While the app is used in localhost or intranet network, less than 30ms is needed
 ## Status
 V1 released nightly, waiting for bugs reporting.
 Tested on Android and google chrome, chromium.
+Follow @lombardweb for further updates. 
 
 ## Usage
 This app is easy to use.
@@ -119,3 +120,4 @@ SOFTWARE.
 ### Bugs
 I am not perfect, if you find a bug or someone omited to quote into the licence credits, an unexpected behavior into the PWA, i will make my best to correct fastly, send me an email : 
 contact@lombard-web-services.com
+
