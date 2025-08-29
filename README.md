@@ -104,8 +104,8 @@ A PWA feature has been coded to facilitate the install .
 
 ### Credits & License
 
-**License:** CC BY-NC-ND
-![Logo de la licence CC BY-NC-ND](CC_BY-NC-ND.png)
+**License:** CC BY-NC-SA
+![Logo de la licence CC BY-NC-SA](CC_BY-NC-SA.png)
 
 **Credits:**
 FeedForward project: Thibaut Lombard (Founder and Project Manager), Asmae Lombard (Project Coordinator,  Arabic translation - MA), Yosr Feki (Content producer - TN), Chafiq El Hammami(e2e Management), Hanane El Meskini (Content tester),  Guilad Levy (Hebrew translation), Clementine Haddad Levy (Hebrew translation)
@@ -123,7 +123,7 @@ The main conditions of this license are:
 
 * **Attribution (BY):** You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 * **NonCommercial (NC):** You may not use the material for commercial purposes.
-* **NoDerivatives (ND):** If you remix, transform, or build upon the material, you may not distribute the modified material.
+* **Noderivative:** If you remix, transform, or build upon the material, you may not distribute the modified material.
 
 
 
