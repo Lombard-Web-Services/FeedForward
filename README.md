@@ -104,8 +104,8 @@ A PWA feature has been coded to facilitate the install .
 
 ### Credits & License
 
-**License:** CC BY-NC-SA
-![Logo de la licence CC BY-NC-SA](CC_BY-NC-SA.png)
+**License:** 
+![Logo de la licence CC BY-NC-ND](CC_BY-NC-ND.png)
 
 **Credits:**
 FeedForward project: Thibaut Lombard (Founder and Project Manager), Asmae Lombard (Project Coordinator,  Arabic translation - MA), Yosr Feki (Content producer - TN), Chafiq El Hammami(e2e Management), Hanane El Meskini (Content tester),  Guilad Levy (Hebrew translation), Clementine Haddad Levy (Hebrew translation)
